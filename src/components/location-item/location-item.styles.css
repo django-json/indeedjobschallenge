@@ -1,0 +1,23 @@
+.location-item {
+    list-style-type: none;
+    padding: var(--space-xs) 0;
+    padding-left: var(--space-sm);
+    position: relative;
+}
+
+.location-item label {
+    font-family: var(--secondary-font-family);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    margin-left: var(--space-xs);
+    color: var(--dark-blue);
+}
+
+.location-item input[type='radio'] {
+    transform: scale(1.5);
+}
+
+.location-item input,
+.location-item label {
+    cursor: pointer;
+}

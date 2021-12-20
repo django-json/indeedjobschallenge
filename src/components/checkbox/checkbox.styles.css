@@ -1,0 +1,8 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-family: var(--secondary-font-family);
+    font-weight: 500;
+    font-size: var(--fs-sm);
+    color: var(--dark-blue);
+}

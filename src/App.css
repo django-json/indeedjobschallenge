@@ -1,38 +1,59 @@
 .App {
-  text-align: center;
+    max-width: 1200px;
+    height: 100vh;
+    margin: var(--space-sm);
+    font-family: var(--primary-font-family);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App__brand {
+    font-size: var(--fs-lg);
+    font-family: var(--secondary-font-family);
+    margin-bottom: var(--space-md);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .input-group {
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .input-group .form-control {
+    height: 50px;
+    padding-left: 45px;
+    padding-right: 100px;
+    border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.App .form-control:focus {
+    border: 2px solid var(--dark-blue);
+    box-shadow: none;
+    background-color: var(--white);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .form-control:focus + .material-icons {
+    color: var(--dark-blue);
+}
+
+.App .input-group .btn {
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 99;
+}
+
+.App .input-group .material-icons {
+    position: absolute;
+    top: 37%;
+    left: 15px;
+    z-index: 99;
+}
+
+.App .footer {
+    margin-top: 150px;
+}
+
+@media screen and (min-width: 798px) {
+    .App {
+        margin: var(--space-lg) calc(var(--space-xl) * 1.5);
+    }
 }

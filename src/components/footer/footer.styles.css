@@ -1,0 +1,27 @@
+.footer {
+    font-size: 14px;
+    font-family: var(--footer-font);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--grey-1);
+}
+
+.footer > p {
+    width: 60%;
+    border-top: var(--space-md);
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer__creator {
+    text-decoration: underline;
+    font-weight: 700;
+}

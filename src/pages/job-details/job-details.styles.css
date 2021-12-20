@@ -1,0 +1,115 @@
+.job-details-page__back {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: var(--space-lg);
+}
+
+.job-details-page__back .material-icons {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    color: var(--blue);
+}
+
+.job-details-page__link {
+    font-family: var(--secondary-font-family);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--blue);
+    padding-left: 30px;
+}
+
+.job-details-page__link:hover,
+.job-details-page__link:focus {
+    color: var(--dark-blue);
+}
+
+.job-details-page__link:hover + .material-icons,
+.job-details-page__link:focus + .material-icons {
+    color: var(--dark-blue);
+    transition: 0.5s;
+}
+
+.job-details-page__apply {
+    font-family: var(--secondary-font-family);
+    font-size: var(--fs-sm);
+    word-wrap: break-word;
+    margin-bottom: var(--space-lg);
+}
+
+.job-details-page__apply > h3 {
+    font-weight: 700;
+    color: var(--grey-1);
+}
+
+.job-details-page__apply > .job-details-page__site {
+    font-weight: 500;
+    width: 300px;
+}
+
+.job-details-page__apply a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.job-details-page__apply a:hover {
+    text-decoration: underline;
+}
+
+.job-details-page__name {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.job-details-page__publication-date {
+    font-size: var(--fs-xs);
+    font-weight: 500;
+    color: var(--grey-1);
+}
+
+.job-details-page__company {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+}
+
+.job-details-page__location {
+    font-size: var(--fs-xs);
+    font-weight: 500;
+    color: var(--grey-1);
+    display: flex;
+    align-items: center;
+}
+
+.job-details-page__contents {
+    color: var(--dark-blue);
+    margin-top: var(--space-lg);
+}
+
+@media screen and (min-width: 576px) {
+    .job-details-page {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .job-details-page__col:nth-child(1) {
+        flex: 0 0 250px;
+        margin-right: 60px;
+    }
+
+    .job-details-page__name-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .job-details-page__name {
+        margin-right: var(--space-sm);
+    }
+}

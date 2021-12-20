@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React, { useContext } from 'react';
+import { Route, Switch } from 'react-router-dom';
+
 import './App.css';
 
+import HomePage from './pages/homepage/homepage.component';
+import JobDetailsPage from './pages/job-details/job-details.component';
+import Footer from './components/footer/footer.component';
+import ScrollToTop from './components/scroll-to-top/scroll-to-top.component';
+
+import { JobsContext } from './providers/jobs/jobs.provider';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const { jobs } = useContext(JobsContext);
+
+    return (
+        <div className="App">
+            <div className="App__brand">
+                <span className="fw-bold">Indeed</span>
+                <span className="fw-light"> Jobs</span>
+            </div>
+            <ScrollToTop />
+            <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route
+                    path="/job_details/:id"
+                    render={() => <JobDetailsPage jobs={jobs} />}
+                />
+            </Switch>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

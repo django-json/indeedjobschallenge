@@ -1,13 +1,280 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --footer-font-family: 'Montserrat', sans-serif;
+    --secondary-font-family: 'Poppins', sans-serif;
+    --primary-font-family: 'Roboto', sans-serif;
+
+    /* Spacing | Global */
+    --space-unit: 1em;
+    --space-xs: calc(0.5 * var(--space-unit));
+    --space-sm: calc(0.7 * var(--space-unit));
+    --space-md: calc(1.25 * var(--space-unit));
+    --space-lg: calc(2 * var(--space-unit));
+    --space-xl: calc(3 * var(--space-unit));
+
+    /* Font Sizes | Global */
+    --fs-xs: 12px;
+    --fs-sm: 14px;
+    --fs-md: 18px;
+    --fs-lg: 24px;
+
+    /* Color | Global */
+    --base: #f6f7fb;
+    --grey-1: #b9bdcf;
+    --grey-2: #f2f2f2;
+    --blue: #1e86ff;
+    --dark-blue: #334680;
+    --white: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Utilities */
+/* Font Weight */
+.fw-light {
+    font-weight: 300;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+/* Font Size */
+.fs-xs {
+    font-size: var(--fs-xs);
+}
+
+.fs-sm {
+    font-size: var(--fs-sm);
+}
+
+.fs-md {
+    font-size: var(--fs-md);
+}
+
+.fs-lg {
+    font-size: var(--fs-lg);
+}
+
+/* Font Colors */
+.text-primary {
+    color: var(--blue);
+}
+
+.text-secondary {
+    color: var(--grey-1);
+}
+
+.text-light {
+    color: var(--white);
+}
+
+.text-dark {
+    color: var(--dark-blue);
+}
+
+/* Display */
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-self-end {
+    align-items: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.flex-direction-col {
+    flex-direction: column;
+}
+
+/* Vertical Align */
+.vertical-align-bottom {
+    vertical-align: text-bottom;
+}
+
+.vertical-align-baseline {
+    vertical-align: baseline;
+}
+
+/* Width */
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* Margin */
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-1 {
+    margin-top: calc(var(--space-unit) * 0.25);
+}
+
+.mt-2 {
+    margin-top: calc(var(--space-unit) * 0.5);
+}
+
+.mt-3 {
+    margin-top: var(--space-unit);
+}
+
+.mt-4 {
+    margin-top: calc(var(--space-unit) * 1.25);
+}
+
+.mt-5 {
+    margin-top: calc(var(--space-unit) * 3);
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.mb-0 {
+    margin-top: 0;
+}
+
+.mb-1 {
+    margin-bottom: calc(var(--space-unit) * 0.25);
+}
+
+.mb-2 {
+    margin-bottom: calc(var(--space-unit) * 0.5);
+}
+
+.mb-3 {
+    margin-bottom: var(--space-unit);
+}
+
+.mb-4 {
+    margin-bottom: calc(var(--space-unit) * 1.25);
+}
+
+.mb-5 {
+    margin-bottom: calc(var(--space-unit) * 3);
+}
+
+.mt-auto {
+    margin-bottom: auto;
+}
+
+.mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mx-1 {
+    margin: 0 calc(var(--space-unit) * 0.25);
+}
+
+.mx-2 {
+    margin: 0 calc(var(--space-unit) * 0.5);
+}
+
+.mx-3 {
+    margin: 0 var(--space-unit);
+}
+
+.mx-4 {
+    margin: 0 calc(var(--space-unit) * 1.25);
+}
+
+.mx-5 {
+    margin: 0 calc(var(--space-unit) * 3);
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.my-1 {
+    margin: calc(var(--space-unit) * 0.25) 0;
+}
+
+.my-2 {
+    margin: calc(var(--space-unit) * 0.5) 0;
+}
+
+.my-3 {
+    margin: var(--space-unit) 0;
+}
+
+.my-4 {
+    margin: calc(var(--space-unit) * 1.25) 0;
+}
+
+.my-5 {
+    margin: calc(var(--space-unit) * 3) 0;
+}
+
+.my-auto {
+    margin: auto 0;
+}
+
+/* Material Icon */
+.material-icons {
+    font-size: 15px;
+    color: var(--grey-1);
+}
+
+/*
+  earth icon: public;
+  clock: schedule;
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--base);
+    display: flex;
+    justify-content: center;
 }
