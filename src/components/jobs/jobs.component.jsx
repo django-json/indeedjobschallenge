@@ -17,7 +17,7 @@ import { JobsContext } from '../../providers/jobs/jobs.provider';
 
 // HOC
 import WithSpinner from '../with-spinner/with-spinner.component';
-// const ListWithSpinner = WithSpinner(List);
+const ListWithSpinner = WithSpinner(List);
 
 const defaultLocations = [
     { id: 0, location: 'London' },
@@ -81,27 +81,33 @@ function Jobs() {
                 <List items={defaultLocations} itemRenderer={LocationItem} />
             </div>
             <div className="jobs__list">
-                {!isFetching ? (
+                {/* {!isFetching ? (
                     <>
                         <List items={jobs.jobs} itemRenderer={JobsItem} />
-                        <ReactPaginate
-                            previousLabel={'<'}
-                            nextLabel={'>'}
-                            pageCount={jobs.page_count}
-                            pageRangeDisplayed={3}
-                            marginPagesDisplayed={1}
-                            onPageChange={handlePageClick}
-                            containerClassName={'pagination'}
-                            breakLinkClassName={'pagination__break-link'}
-                            previousLinkClassName={'pagination__link'}
-                            nextLinkClassName={'pagination__link'}
-                            disabledClassName={'pagination__link--disabled'}
-                            activeClassName={'pagination__link--active'}
-                        />
                     </>
                 ) : (
                     <Spinner />
-                )}
+                )} */}
+
+                <ListWithSpinner
+                    isLoading={isFetching}
+                    items={jobs.jobs}
+                    itemRenderer={JobsItem}
+                />
+                <ReactPaginate
+                    previousLabel={'<'}
+                    nextLabel={'>'}
+                    pageCount={jobs.page_count}
+                    pageRangeDisplayed={3}
+                    marginPagesDisplayed={1}
+                    onPageChange={handlePageClick}
+                    containerClassName={'pagination'}
+                    breakLinkClassName={'pagination__break-link'}
+                    previousLinkClassName={'pagination__link'}
+                    nextLinkClassName={'pagination__link'}
+                    disabledClassName={'pagination__link--disabled'}
+                    activeClassName={'pagination__link--active'}
+                />
             </div>
         </div>
     );

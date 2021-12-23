@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
 
@@ -7,10 +7,7 @@ import './job-details.styles.css';
 import Badge from '../../components/badge/badge.component';
 import Spinner from '../../components/spinner/spinner.component';
 
-import JobsContext from '../../providers/jobs/jobs.provider';
-
 function JobDetailsPage({ jobs, match }) {
-    console.log(jobs);
     function renderJobDetailsPage() {
         //Add id if jobs[x].id doesn't exist.
         jobs.jobs.forEach((job, index) => {

@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect } from 'react';
-import debounce from 'lodash.debounce';
 
 import { APIManager } from '../../api/APIManager';
 
@@ -22,66 +21,29 @@ function JobsProvider({ children }) {
     const [searchValue, setSearchValue] = useState('');
     const [location, setLocation] = useState('New York');
     const [isFullTime, setIsFullTime] = useState(false);
-    const [isInitialRender, setIsInitialRender] = useState(true);
     const [isFetching, setIsFetching] = useState(false);
-    const starting_page = 1;
-    const debouncedQuery = useDebounce(location, 1000);
+    const debouncedLocation = useDebounce(location, 1000);
 
     useEffect(() => {
         async function fetchJobs() {
             setIsFetching(true);
-            const jobs = await getJobs(searchValue, starting_page, location);
+            /* Function: getJobs
+               Parameters: Object
+               Properties:
+                    search_query: required
+                    page: required
+                    location: optional
+                    job_type: optional
+            */
+            const jobs = await getJobs({
+                location: debouncedLocation,
+                job_type: isFullTime
+            });
             setJobs(jobs);
             setIsFetching(false);
         }
         fetchJobs();
-    }, []);
-
-    useEffect(() => {
-        if (isInitialRender) {
-            setIsInitialRender(false);
-        } else {
-            async function filterJobsByJobType() {
-                try {
-                    setIsFetching(true);
-                    const jobType = isFullTime ? 'fulltime' : '';
-                    const search_query = searchValue
-                        ? searchValue
-                        : 'Web Developer';
-                    const search_location = location ? location : 'New York';
-                    const jobs = await APIManager.fetchJobsByJobType(
-                        search_query,
-                        starting_page,
-                        search_location,
-                        jobType
-                    );
-                    setJobs(jobs);
-                    setIsFetching(false);
-                } catch (error) {
-                    console.log(error);
-                }
-            }
-            filterJobsByJobType();
-        }
-    }, [isFullTime]);
-
-    useEffect(() => {
-        if (isInitialRender) {
-            setIsInitialRender(false);
-        } else {
-            async function fetchJobsByLocation() {
-                setIsFetching(true);
-                const jobs = await getJobs(
-                    searchValue,
-                    starting_page,
-                    location
-                );
-                setJobs(jobs);
-                setIsFetching(false);
-            }
-            fetchJobsByLocation();
-        }
-    }, [debouncedQuery]);
+    }, [debouncedLocation, isFullTime]);
 
     function useDebounce(value, delay) {
         // State and setters for debounced value
@@ -119,17 +81,21 @@ function JobsProvider({ children }) {
         setIsFullTime(!isFullTime);
     }
 
-    async function getJobs(searchValue, page, location) {
+    async function getJobs({
+        search_query = searchValue ? searchValue : 'Web Developer',
+        page = 1,
+        debounced_location = location,
+        job_type = isFullTime
+    }) {
         console.log('Fetching jobs from origin...');
-        const search_query = searchValue ? searchValue : 'Web Developer';
-        const search_location = location ? location : 'New York';
 
         try {
-            const jobs = APIManager.fetchJobs(
+            const jobs = await APIManager.fetchJobs({
                 search_query,
                 page,
-                search_location
-            );
+                location: debounced_location,
+                job_type: job_type ? 'fulltime' : false
+            });
             return jobs;
         } catch (error) {
             console.log(error);
@@ -137,11 +103,13 @@ function JobsProvider({ children }) {
     }
 
     async function handlePageClick({ selected: selectedPage }) {
-        //React Paginate page start at 0
-        //API page start at 1
+        //React Paginate start at page 0
+        //API start at page 1
+        setIsFetching(true);
         const page = selectedPage + 1;
-        const jobs = await getJobs(searchValue, page, location);
+        const jobs = await getJobs({ page });
         setJobs(jobs);
+        setIsFetching(false);
     }
 
     function handleSearchChange(e) {
@@ -151,8 +119,10 @@ function JobsProvider({ children }) {
 
     async function handleSearchClick() {
         if (searchValue) {
-            const jobs = await getJobs(searchValue, starting_page, location);
+            setIsFetching(true);
+            const jobs = await getJobs({ search_query: searchValue });
             setJobs(jobs);
+            setIsFetching(false);
         }
     }
 

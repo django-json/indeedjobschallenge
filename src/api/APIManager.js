@@ -1,6 +1,5 @@
-import { fetchJobs, fetchJobsByJobType } from './jobs/jobs';
+import { fetchJobs } from './jobs/jobs';
 
 export const APIManager = {
-    fetchJobs,
-    fetchJobsByJobType
+    fetchJobs
 };
