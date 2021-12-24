@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Indeed Jobs Challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://indeedjobschallenge.netlify.app">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/django-json/indeedjobschallenge">
       Solution
     </a>
     <span> | </span>
@@ -26,39 +26,49 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [How to use](#how-to-use)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+-   [Overview](#overview)
+    -   [Built With](#built-with)
+-   [Features](#features)
+-   [How to use](#how-to-use)
+-   [Contact](#contact)
+-   [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![indeedjobs-screenshot1](https://user-images.githubusercontent.com/44185999/147302795-742c4bef-828d-49be-b5a0-33488888fb67.png)
+![indeedjobs-screenshot2](https://user-images.githubusercontent.com/44185999/147302817-7beb2cdc-d554-4f0a-9a73-f8402fbfbd44.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+-   You can check the demo [here](https://indeedjobschallenge.netlify.app).
+-   This challenge gave me problems as the API that is suppose to be used was deprecated. So I tried potential alternative API that will give me the same data if possible. As a result, this challenge took so much of my time until I found the right one that is just newly published in the market that suit the needs for this app. I enjoyed and at the same time frustrated developing this project. I thought of stopping and just jump to the next challenge many times but I believe that in reality, there are unexpected events like this in a real work job and I can't just stop because it is difficult to continue. Patient indeed is virtue. It gave me a feeling of accomplishment and fulfillment because my labor is not in vain. Haha
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+-   [React](https://reactjs.org/)
 
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps) was to build an application to complete the given user stories:
+
+-   [x] User story: I can see a list of jobs in a city by default
+-   [x] User story: I can search for jobs with a given keyword
+-   [x] User story: I can search for jobs with a city name, zip code, or other location
+-   [x] User story: I can select one option from at least 4 pre-defined options
+-   [x] User story: I can search for a full-time job only
+-   [x] User story: I can see a list of jobs with their logo, company name, location, and posted time.
+-   [x] User story: When I select a job, I can see job descriptions and how to apply like the given design.
+-   [x] User story: When I am on the job details page, I can go back to the search page
+-   [] User story (optional): I can see a list of jobs in the closest city from my location by default
+-   [] User story (optional): I can see jobs on different pages, 5 items on each page
+
+P.S: These challenge is suppose to work with Github Jobs API. Since it was deprecated not long ago, Some of the features could not be implemented since the app needs to abide with the alternative [API](https://rapidapi.com/fayeznazzal98/api/awesome-indeed) that is used in this challenge.
 
 ## How To Use
 
@@ -68,7 +78,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/django-json/indeedjobschallenge
 
 # Install dependencies
 $ npm install
@@ -81,12 +91,12 @@ $ npm start
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
 
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
+-   [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
+-   [Node.js](https://nodejs.org/)
+-   [devChallenges.io](https://devchallenges.io)
+-   [Debouncing with React Hooks](https://dev.to/gabe_ragland/debouncing-with-react-hooks-jci)
+-   [Awesome Indeed API](https://rapidapi.com/fayeznazzal98/api/awesome-indeed)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+-   GitHub [@django-json](https://github.com/diango-json)
