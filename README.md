@@ -40,8 +40,6 @@
 ![indeedjobs-screenshot1](https://user-images.githubusercontent.com/44185999/147302795-742c4bef-828d-49be-b5a0-33488888fb67.png)
 ![indeedjobs-screenshot2](https://user-images.githubusercontent.com/44185999/147302817-7beb2cdc-d554-4f0a-9a73-f8402fbfbd44.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
 -   You can check the demo [here](https://indeedjobschallenge.netlify.app).
 -   This challenge gave me problems as the API that is suppose to be used was deprecated. So I tried potential alternative API that will give me the same data if possible. As a result, this challenge took so much of my time until I found the right one that is just newly published in the market that suit the needs for this app. I enjoyed and at the same time frustrated developing this project. I thought of stopping and just jump to the next challenge many times but I believe that in reality, there are unexpected events like this in a real work job and I can't just stop because it is difficult to continue. Patient indeed is virtue. It gave me a feeling of accomplishment and fulfillment because my labor is not in vain. Haha
 
