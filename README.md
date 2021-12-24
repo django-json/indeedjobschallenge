@@ -66,7 +66,7 @@ This application/site was created as a submission to a [DevChallenges](https://d
 -   [] User story (optional): I can see a list of jobs in the closest city from my location by default
 -   [] User story (optional): I can see jobs on different pages, 5 items on each page
 
-P.S: This challenge is suppose to work with Github Jobs API. Since it was deprecated not long ago, Some of the features could not be implemented since the app needs to abide with the alternative [API](https://rapidapi.com/fayeznazzal98/api/awesome-indeed) that is used in this challenge.
+P.S: This challenge is suppose to work with Github Jobs API. Since it was deprecated not long ago, some of the features could not be implemented since the app needs to abide with the alternative [API](https://rapidapi.com/fayeznazzal98/api/awesome-indeed) that is used in this challenge.
 
 ## How To Use
 
