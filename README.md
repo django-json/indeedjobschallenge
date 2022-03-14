@@ -68,6 +68,8 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 P.S: This challenge is suppose to work with Github Jobs API. Since it was deprecated not long ago, some of the features could not be implemented since the app needs to abide with the alternative [API](https://rapidapi.com/fayeznazzal98/api/awesome-indeed) that is used in this challenge.
 
+Update (March 14, 2022): Unfortunately, the API used here has shutdown already and I don't know why and there is no equivalent data needed for this app at the moment.
+
 ## How To Use
 
 <!-- Example: -->
