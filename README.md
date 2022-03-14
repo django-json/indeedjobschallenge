@@ -1,5 +1,5 @@
 ## Update (March 14, 2022): 
-Unfortunately, the API used here has shutdown already and I don't know why and there is no equivalent data needed for this app at the moment.
+Unfortunately, the API used here has shutdown already and I don't know why and there is no equivalent API with the needed data needed for this app to run at the moment.
 
 <h1 align="center">Indeed Jobs Challenge</h1>
 
